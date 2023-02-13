@@ -1,0 +1,175 @@
+:root {
+    --primary: #b1b2ff;
+    --white: #fff;
+    --dark: #212024;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    background-color: #f1f6f5;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 1500px;
+}
+
+.wrapper .names_options {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.wrapper .names_options div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.wrapper .names_options div select {
+    background-color: var(--white);
+    color: var(--dark);
+    outline: none;
+    cursor: pointer;
+}
+
+.wrapper .names_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.wrapper .names_wrapper .names_template {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.wrapper .names_wrapper .names_template > p {
+    padding: 0.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: small;
+    border-radius: 0.2rem;
+}
+
+.wrapper .names_options div select,
+.wrapper .names_options input,
+.wrapper .names_options button,
+.wrapper .pined_names_container div .btns_container button,
+.wrapper .names_container div .btns_container button {
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.2rem;
+}
+
+.wrapper .names_options input {
+    outline: none;
+    width: 100%;
+}
+
+.wrapper .names_options button {
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+.wrapper .pined_names_container {
+    margin-bottom: 0.5rem;
+}
+
+.wrapper .pined_names_container,
+.wrapper .names_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+}
+
+.wrapper .pined_names_container_void,
+.wrapper .names_container_void {
+    color: var(--dark);
+    text-align: center;
+    font-size: small;
+}
+
+.wrapper .names_container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--white);
+    color: var(--dark);
+    border-radius: 0.2rem;
+}
+
+.wrapper .pined_names_container div .name,
+.wrapper .names_container div .name {
+    text-transform: capitalize;
+}
+
+.wrapper .pined_names_container div .btns_container,
+.wrapper .names_container div .btns_container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+
+.wrapper .pined_names_container div .btns_container button,
+.wrapper .names_container div .btns_container button {
+    cursor: pointer;
+}
+
+.wrapper .pined_names_container div .btns_container .remove_btn,
+.wrapper .names_container div .btns_container .remove_btn {
+    background-color: #ffb6b9;
+    color: var(--white);
+}
+
+.wrapper .names_container div .btns_container .pin_btn {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.wrapper .pined_names_container div .btns_container .unpin_btn {
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.wrapper .names_container div .btns_container .throw_btn {
+    background-color: #769fcd;
+    color: var(--white);
+}
+
+.wrapper .names_container div .btns_container .unthrow_btn {
+    background-color: #ddd;
+    color: var(--dark);
+}
+
+.wrapper .pined_names_container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--dark);
+    color: var(--white);
+    border-radius: 0.2rem;
+}
+
+.wrapper .names_container div .name.throw {
+    text-decoration: line-through;
+    color: gray;
+}
